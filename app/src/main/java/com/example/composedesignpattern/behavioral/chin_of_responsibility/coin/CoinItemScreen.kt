@@ -32,8 +32,15 @@ fun CoinItemScreen(coinValue: Int, num: Int, onFinishProgress: @Composable () ->
         if (showProgress) {
             CircularProgressIndicator()
         } else {
+
+            val billOrCoin = if (coinValue >= 1000) {
+                "지폐"
+            } else {
+                "동전"
+            }
+
             Text(
-                text = "${coinValue}원 동전 갯수 - $num",
+                text = "${coinValue}원 $billOrCoin 갯수 - $num",
                 modifier = Modifier
                     .height(100.dp)
                     .padding(16.dp)

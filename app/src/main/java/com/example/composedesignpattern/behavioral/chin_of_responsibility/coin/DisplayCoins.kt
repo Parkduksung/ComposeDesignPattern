@@ -4,6 +4,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 
 
+@Stable
+class FiftyThousandWonDispenser : AbstractCoinDispenserChain(coinValue = 50000)
+
+@Stable
+class TenThousandWonDispenser : AbstractCoinDispenserChain(coinValue = 10000)
+
+@Stable
+class FiveThousandWonDispenser : AbstractCoinDispenserChain(coinValue = 5000)
+
+@Stable
+class ThousandWonDispenser : AbstractCoinDispenserChain(coinValue = 1000)
+
+@Stable
+class FiveHundredWonDispenser : AbstractCoinDispenserChain(coinValue = 500)
 
 @Stable
 class HundredWonDispenser : AbstractCoinDispenserChain(coinValue = 100)
