@@ -21,4 +21,9 @@ class CoinDispenseManager {
         this.setNextChain(next)
         return next
     }
+
+    private infix fun CoinDispenserChain.chainTo(next: CoinDispenserChain): CoinDispenserChain {
+        this.setNextChain(next)
+        return next
+    }
 }

@@ -31,12 +31,13 @@ fun CoinDispenserScreen() {
                 .padding(16.dp),
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
-                imeAction = ImeAction.Search
+                imeAction = ImeAction.Done
             ),
             singleLine = true,
+            maxLines = 1,
             label = { Text("input coin") },
             keyboardActions = KeyboardActions(
-                onSearch = {
+                onDone = {
                     if (inputCoin.isDigitsOnly() && inputCoin.isNotEmpty()) coinUiState =
                         CoinUiState.Dispense(inputCoin.toInt())
                 }
