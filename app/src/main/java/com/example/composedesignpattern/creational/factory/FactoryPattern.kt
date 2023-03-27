@@ -1,4 +1,4 @@
-package com.example.composedesignpattern.factory
+package com.example.composedesignpattern.creational.factory
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
