@@ -3,6 +3,11 @@ package com.example.composedesignpattern.behavioral.chin_of_responsibility.coin
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 
+
+
+
+
+
 interface CoinDispenserChain {
 
     val coinValue: Int
@@ -14,74 +19,17 @@ interface CoinDispenserChain {
 }
 
 @Stable
-class HundredWonDispenser : CoinDispenserChain {
-
-    override val coinValue: Int
-        get() = 100
-
-    private lateinit var nextChain: CoinDispenserChain
-
-    override fun setNextChain(nextChain: CoinDispenserChain) {
-        this.nextChain = nextChain
-    }
-
-    @Composable
-    override fun Dispense(currency: Currency) {
-        DisplayCoins(currency, coinValue) { nextAmount ->
-            if (::nextChain.isInitialized) {
-                nextChain.Dispense(Currency(nextAmount))
-            }
-        }
-    }
-}
+class HundredWonDispenser : AbstractCoinDispenserChain(coinValue = 100)
 
 @Stable
-class TenWonDispenser : CoinDispenserChain {
-
-    override val coinValue: Int
-        get() = 10
-
-    private lateinit var nextChain: CoinDispenserChain
-
-    override fun setNextChain(nextChain: CoinDispenserChain) {
-        this.nextChain = nextChain
-    }
-
-    @Composable
-    override fun Dispense(currency: Currency) {
-        DisplayCoins(currency, coinValue) { nextAmount ->
-            if (::nextChain.isInitialized) {
-                nextChain.Dispense(Currency(nextAmount))
-            }
-        }
-    }
-}
+class TenWonDispenser : AbstractCoinDispenserChain(coinValue = 10)
 
 @Stable
-class OneWonDispenser : CoinDispenserChain {
-
-    override val coinValue: Int
-        get() = 1
-
-    private lateinit var nextChain: CoinDispenserChain
-
-    override fun setNextChain(nextChain: CoinDispenserChain) {
-        this.nextChain = nextChain
-    }
-
-    @Composable
-    override fun Dispense(currency: Currency) {
-        DisplayCoins(currency, coinValue) { nextAmount ->
-            if (::nextChain.isInitialized) {
-                nextChain.Dispense(Currency(nextAmount))
-            }
-        }
-    }
-}
+class OneWonDispenser : AbstractCoinDispenserChain(coinValue = 1)
 
 
 @Composable
-private fun DisplayCoins(
+fun DisplayCoins(
     currency: Currency,
     coinValue: Int,
     onRemainingAmount: @Composable (Int) -> Unit

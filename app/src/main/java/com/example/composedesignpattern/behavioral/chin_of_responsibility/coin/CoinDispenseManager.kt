@@ -17,7 +17,7 @@ class CoinDispenseManager {
         hundredWonDispenser.Dispense(currency = currency)
     }
 
-    private infix fun CoinDispenserChain.chainTo(next: CoinDispenserChain): CoinDispenserChain {
+    private infix fun AbstractCoinDispenserChain.chainTo(next: AbstractCoinDispenserChain): AbstractCoinDispenserChain {
         this.setNextChain(next)
         return next
     }
