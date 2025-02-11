@@ -1,4 +1,4 @@
-package com.example.composedesignpattern.behavioral.chin_of_responsibility.coin
+package com.example.composedesignpattern.patterns.chain_of_responsibility.coin
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.CircularProgressIndicator

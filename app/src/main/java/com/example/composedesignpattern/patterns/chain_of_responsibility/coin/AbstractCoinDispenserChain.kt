@@ -1,4 +1,4 @@
-package com.example.composedesignpattern.behavioral.chin_of_responsibility.coin
+package com.example.composedesignpattern.patterns.chain_of_responsibility.coin
 
 import androidx.compose.runtime.Composable
 

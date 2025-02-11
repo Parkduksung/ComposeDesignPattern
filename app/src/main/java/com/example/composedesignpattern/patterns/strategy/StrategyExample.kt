@@ -1,4 +1,4 @@
-package com.example.composedesignpattern.behavioral.strategy
+package com.example.composedesignpattern.patterns.strategy
 
 fun main(args: Array<String>) {
     val h = OurHero()

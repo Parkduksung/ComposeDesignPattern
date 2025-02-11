@@ -1,4 +1,4 @@
-package com.example.composedesignpattern.behavioral.command
+package com.example.composedesignpattern.patterns.command
 
 fun main(args: Array<String>) {
 

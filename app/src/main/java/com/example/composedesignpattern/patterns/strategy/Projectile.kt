@@ -1,7 +1,8 @@
-package com.example.composedesignpattern.behavioral.strategy
+package com.example.composedesignpattern.patterns.strategy
 abstract class Projectile(private val x: Int,
                           private val y: Int,
-                          private val direction: Direction) {
+                          private val direction: Direction
+) {
 
 }
 

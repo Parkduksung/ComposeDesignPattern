@@ -1,4 +1,4 @@
-package com.example.composedesignpattern.behavioral.strategy
+package com.example.composedesignpattern.patterns.strategy
 
 class OurHeroJavaWay {
     private var direction = Direction.LEFT

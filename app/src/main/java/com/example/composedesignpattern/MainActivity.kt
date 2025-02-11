@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.composedesignpattern.behavioral.chin_of_responsibility.coin.CoinDispenserScreen
+import com.example.composedesignpattern.patterns.chain_of_responsibility.coin.CoinDispenserScreen
 import com.example.composedesignpattern.ui.theme.ComposeDesignPatternTheme
 
 class MainActivity : ComponentActivity() {
